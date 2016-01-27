@@ -36,6 +36,7 @@ Template.userRegistrationForm.events({
     e.preventDefault();
 
     var email = t.find('#email').value;
+    var username = t.find('#username').value;
     var password = t.find('#password').value;
     var confirmPassword = t.find('#confirm_password').value;
 
@@ -46,9 +47,15 @@ Template.userRegistrationForm.events({
        return;
      }
 
+     if(username === "")
+     {
+       throw new Meteor.Error('Must enter a username');
+       return;
+     }
+
      // Create a new user.
      // TODO ADD USERNAME AS FIELD TO ACCOUNT
-     Accounts.createUser({email: email, password: password}, function(error) {
+     Accounts.createUser({email: email, username: username, password: password}, function(error) {
        if(error) {
          // TODO Display and handle errors.
          console.log(error);
