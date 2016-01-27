@@ -1,4 +1,4 @@
-Accounts.Meteor.onCreateUser(function(options, user){
+Accounts.onCreateUser(function(options, user){
   Profiles.insert({
     belongsTo: user._id,
     bio: "New to RPLY!",

@@ -1,0 +1,101 @@
+@import "../scss/design.scss";
+
+.container {
+  width:100%;
+  margin-top:2em;
+}
+
+header {
+  width:100%;
+  height:5em;
+  background:#245664;
+  border-top:1px solid darken(#245664, 7%);
+  border-bottom:1px solid darken(#245664, 7%);
+  margin-top:-1em;
+  overflow:hidden;
+}
+
+.navbar {
+  @extend .verticalAlign;
+  width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-top:1.5em;
+  padding-left:1em;
+  padding-right:1em;
+
+  background:lighten(#245664, 10%);
+  box-shadow:0px 0px 4px #222;
+  color:#FFF;
+  border-left:1px solid lighten(#245664, 20%);
+  border-right:1px solid lighten(#245664, 20%);
+
+  .navbarLogo {
+    display:inline-block;
+    @extend .logo;
+    font-size:3em;
+    text-shadow:3px 3px 0px darken($ocean-blue, 20%) !important;
+
+    a {
+      text-decoration:none;
+      font-weight:normal;
+      display:inline-block;
+      &:visited {
+        color:#FFF;
+      }
+      &:hover {
+        text-decoration:none;
+        color:#FFF;
+      }
+    }
+
+    &:before {
+      display:inline-block;
+      content:"<";
+      text-shadow:none;
+      @include transform(translateY(-2px));
+      text-shadow:0px 3px 0px darken($ocean-blue, 20%) !important;
+    }
+    &:after {
+      display:inline-block;
+      content:">";
+      text-shadow:none;
+      @include transform(translateY(-2px));
+      text-shadow:0px 3px 0px darken($ocean-blue, 20%) !important;
+    }
+  }
+
+  ul {
+    @extend .verticalAlign;
+    display:inline-block;
+    list-style: none;
+    > li {
+      display:inline-block;
+      font-family: "fira-sans";
+      text-shadow:2px 1px 0px darken($ocean-blue, 15%);
+      padding-right:1em;
+      padding-left:1em;
+
+      cursor:pointer;
+      letter-spacing:0px;
+      @include transition(all 0.3s ease-in-out);
+
+      &:first-child {
+        padding-left:0em;
+      }
+
+      &:last-child:after {
+        display:table;
+        content:"";
+        clear:both;
+      }
+
+      &:hover {
+        letter-spacing:2px;
+        text-shadow:2px 1px 2px darken($ocean-blue, 15%);
+        @include transition(all 0.3s ease-in-out);
+      }
+
+    }
+  }
+}

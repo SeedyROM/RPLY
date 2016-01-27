@@ -1,0 +1,20 @@
+<template name="layout">
+  {{#if currentUser}}
+  <header>
+    <section class="navbar">
+      <div class="navbarLogo">
+        <a href="/">RPLY</a>
+      </div>
+      <ul>
+        <li id="profile">profile</li>
+        <li>messages</li>
+        <li>top rplys</li>
+        <li>search</li>
+        <li id="navLogout">logout</li>
+      </ul>
+    </section>
+  </header>
+  {{/if}}
+
+  {{> yield }}
+</template>

@@ -1,6 +1,6 @@
-Profiles = new Meteor.Collection('profiles');
-Posts = new Meteor.Collection('posts');
-Messages = new Meteor.Collection('messages');
+Profiles = new Mongo.Collection('profiles');
+Posts = new Mongo.Collection('posts');
+Messages = new Mongo.Collection('messages');
 
 var Schemas = {};
 
@@ -16,12 +16,13 @@ Schemas.Profile = new SimpleSchema({
   profilePhoto: {
     type: String,
     max: 128,
-    min: 8
+    min: 8,
+    optional: true
   },
   bio: {
     type: String,
-    max: 512,
-    min: 16
+    max: 512
   },
 });
+
 Profiles.attachSchema(Schemas.Profile);

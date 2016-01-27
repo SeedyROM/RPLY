@@ -1,0 +1,8 @@
+<template name="profile">
+  <div class="container">
+    <h1>{{currentUser.username}}</h1>
+    {{#with profile}}
+    <h4>{{bio}} | {{location}}</h4>
+    {{/with}}
+  </div>
+</template>
