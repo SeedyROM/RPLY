@@ -1,0 +1,39 @@
+// Sass Mixins and Normalize.css.
+@import "{wolves:bourbon}/bourbon";
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
+
+// FONTS
+@import url(https://fonts.googleapis.com/css?family=Cabin|Roboto+Condensed);
+
+// Simple config for percentage sizing.
+html, body {
+  height:100%;
+}
+
+// Lil quick fixes!
+.absoluteCenter {
+  margin:auto;
+  position:absolute;
+  top:0; left:0; bottom:0; right: 0;
+}
+
+.verticalAlign {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+// Some colors to mess around with.
+
+$ocean-blue: #47879A;
+$sky-blue: #83B6C4;
+$off-white: #EFEFEF;
+
+// Here we go!
+
+.logo {
+  font-family:"Cabin", sans-serif;
+  letter-spacing:1px;
+  color:$off-white;
+  text-shadow:2px 2px 0px darken($ocean-blue, 20%) !important;
+}

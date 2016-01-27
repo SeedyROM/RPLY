@@ -1,0 +1,33 @@
+<template name="splashUserForm">
+
+  <h2><a id="signUpLink" class="activeForm">Sign Up</a> <span class="spacers"></span> /
+  <span class="spacers"></span> <a id="loginLink">Login</a></h2>
+
+  {{> userRegistrationForm }}
+  {{> userLoginForm }}
+
+</template>
+
+<template name="userRegistrationForm">
+  <section id="register" class="registertrationForm">
+
+    <form>
+      <input type="text" id="email" maxlength="32" placeholder="Email: me@example.com..." />
+      <input type="text" id="username" maxlength="32" placeholder="Username: bob123, franksmith" />
+      <input type="password" id="password" maxlength="32" placeholder="Password..." />
+      <input type="password" id=confirm_password maxlength="32" placeholder="Confirm Password..." />
+      <input type="submit" value="Sign Up!" class="submit" />
+    </form>
+
+  </section>
+</template>
+
+<template name="userLoginForm">
+  <section id="login" class="registertrationForm">
+    <form>
+      <input type="text" id="email" maxlength="32" placeholder="E-Mail..." />
+      <input type="password" id="password" maxlength="32" placeholder="Password..." />
+      <input type="submit" value="Log In" class="submit" />
+    </form>
+  </section>
+</template>

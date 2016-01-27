@@ -1,0 +1,46 @@
+@import "../scss/design.scss";
+
+.registertrationForm {
+  form {
+    padding:0em 1em 0em 1em;
+    > input {
+      display:block;
+      width:100%;
+      padding:18px 10px 15px 10px;
+      margin-left:-10px;
+      color:#444;
+      border:0px;
+      border-bottom:1px solid #999;
+    }
+
+    input:first-child {
+      @include border-top-radius(5px);
+    }
+    input:nth-last-child(2) {
+      @include border-bottom-radius(5px);
+      border-bottom:none;
+    }
+
+    .submit {
+      margin-top:1.1em;
+      width:408px;
+      background:adjust-hue(lighten($ocean-blue, 10%), -30);
+      border-radius:5px;
+      border:1px solid adjust-hue(lighten($ocean-blue, 20%), -30);
+      color:$off-white;
+    }
+  }
+}
+
+.spacers {
+  display:inline-block;
+  padding-right:0px;
+}
+
+.activeForm {
+  border-bottom:3px solid $off-white;
+}
+
+#login {
+  display: none;
+}
